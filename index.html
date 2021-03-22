@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Shoe Configurator</title>
+  </head>
+  <body>
+<div class="logo-nav">
+      <div class="logo">
+        <h1>Sofa World<a href="#"></a> <i class="fas fa-couch"></i></h1>
+      </div>
+      <ul>
+        <li><a href="#">Configurator</a></li>
+        <li><a href="#">Scroll down</a></li>
+      </nav>
+    </ul>
+    </div>
+    <div class="container">
+      <div class="parallax">
+        <div class="text"><h3 id="the-animation" class="text-animation">Welcome to <span class="sw">Sofa World</span></h3>
+        <h4  id="the-animation" class="text-animation">We provide only the best and comfortable sofa to you.</h4></div>
+      </div>
+
+    <div id="configurator">
+
+      <!-- Color selector -->
+      <div id="color-box">
+         <h3>Available colors</h3>
+         <!-- <div id="color_btns"> -->
+         <svg id="color_btns" viewBox="0 0 1100 4000">
+             <rect class="color_btn" x="350" y="0" width="400" height="400" borderRadius="50" fill="#f2d49b"/>
+             <rect class="color_btn" x="350" y="500" width="400" height="400" fill="#f26671"/>
+             <rect class="color_btn" x="350" y="1000" width="400" height="400" fill="#ffafce"/>
+             <rect class="color_btn" x="350" y="1500" width="400" height="400" fill="#f2059f"/>
+             <rect class="color_btn" x="350" y="2000" width="400" height="400" fill="#dca0e6"/>
+             <rect class="color_btn" x="350" y="2500" width="400" height="400" fill="#8f84d9"/>
+             <rect class="color_btn" x="350" y="3000" width="400" height="400" fill="#afe3ff"/>
+             <rect class="color_btn" x="350" y="3500" width="400" height="400" fill="#a7d9aa"/>
+         </svg>
+         <!-- </div> -->
+     </div>
+     
+         <!-- Product preview-->
+         <div id="product-preview">
+             <div id="sofa"></div>
+             <!-- Stickers preview -->
+             <img class="couchOne hide"  src="./images/couchOne.png" alt="" data-feature="couchOne">
+             <img class="hide" src="./images/couchhtwo.png" alt="" data-feature="couchTwo">
+             <img class="hide" src="./images/couchhThree.png" alt="" data-feature="couchThree">
+             <img class="hide" src="./images/caepet)ne.png" alt="" data-feature="carpetOne">
+         </div>
+         
+         <!-- Feature list - items that can be added to iPhone -->
+                 
+         <div id="options">
+             <h3>Available features</h3>
+             <!-- Stickers -->
+             <h4>Couch</h4>
+             <figure class="option" data-feature="couchOne">
+                 <img src="./images/couch-1.png" alt="featureCouchOne">
+                 
+             </figure>
+             <figure class="option" data-feature="couchTwo">
+                 <img src="./images/couchTwo.png" alt="featureCouchTwo">
+                
+             </figure>
+             <figure class="option" data-feature="couchThree">
+                 <img src="./images/couchThree.png" alt="featureCouchThree">
+                
+             </figure>
+             <figure class="option" data-feature="carpetOne">
+              <img src="./images/feature_carpetOne.png" alt="featureCarpeOne">
+             
+          </figure>
+
+           
+         </div>
+
+         <div id="selected">
+          <h3>selected features</h3>
+          <ul>
+            <!-- featureElements are added here! -->
+          </ul>
+        </div>
+ </div>
+
+
+   <!--  <div class="container">
+      <div class="parallax">
+        <div class="text"><h3 id="the-animation" class="text-animation">Welcome to <span class="sw">Sofa World</span></h3>
+        <h4  id="the-animation" class="text-animation">We provide only the best and comfortable sofa to you.</h4></div>
+      </div>
+
+    <div class="all-container">
+      
+     
+    <div id="product-preview">
+      <img src="couch1.png" alt="" class="feature-item-preview" data-feature="couchOne"/>
+      <img src="couch2.png" alt="" class="feature-item-preview" data-feature="couchTwo"/>
+    </div>
+     <div id="options">
+       <p>available features</p>
+       <figure class="option" data-feature="couchOne">
+        <img src="couch1.png" alt="couchOne" />
+        <figcaption>CouchOne</figcaption>
+      </figure>
+       <figure class="option" data-feature="couchTwo">
+        <img src="couch2.png" alt="couchTwo" />
+        <figcaption>CouchTwo</figcaption>
+      </figure>
+     </div>
+     <section class="container2"></section>
+
+      <div class="colorBox">
+        <h1>Pick a color</h1>
+        <svg viewBox="0 0 842 200">
+          <rect class="color_btn" width="50" height="50" fill="#081c15" />
+          <rect
+            class="color_btn"
+            y="52"
+            width="50"
+            height="50"
+            fill="#1b4332"
+          />
+          <rect
+            class="color_btn"
+            x="52"
+            width="50"
+            height="50"
+            fill="#2d6a4f"
+          />
+          <rect
+            class="color_btn"
+            x="104"
+            width="50"
+            height="50"
+            fill="#40916c"
+          />
+          <rect
+            class="color_btn"
+            x="156"
+            width="50"
+            height="50"
+            fill="#52b788"
+          />
+          <rect
+            class="color_btn"
+            y="52"
+            x="52"
+            width="50"
+            height="50"
+            fill="#74c69d"
+          />
+          <rect
+            class="color_btn"
+            x="104"
+            y="52"
+            width="50"
+            height="50"
+            fill="#95d5b2"
+          />
+          <rect
+            class="color_btn"
+            x="156"
+            y="52"
+            width="50"
+            height="50"
+            fill="#b7e4c7"
+          />
+        </svg>
+      </div>
+     <div id="selected">
+       <p>selected features</p>
+       <ul>
+         
+       </ul>
+     </div>
+    </div> -->
+  </body>
+  <script src="script.js"></script>
+</html>
