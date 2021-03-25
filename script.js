@@ -9,10 +9,11 @@ const features = {
   featureCouchTwo: false,
   featureCouchThree: false,
   featureCarpetOne: false,
+  featureCarpetTwo: false,
 };
 
 async function init() {
-  let response = await fetch("./sofaa-01.svg");
+  let response = await fetch("./sooffaa-01.svg");
   let mySvgData = await response.text();
   console.log(mySvgData);
   document.querySelector("#sofa").innerHTML = mySvgData;
@@ -53,7 +54,7 @@ function theMouseout() {
 }
 
 function colorClick() {
-  console.log("KLIK", this.getAttribute("fill"));
+  console.log("hey", this.getAttribute("fill"));
   if (elementToPaint != undefined) {
     elementToPaint.style.fill = this.getAttribute("fill");
   }
@@ -65,14 +66,12 @@ function textAnime() {
   /* console.log(init); */
   let theText = document.querySelector("#the-animation");
   console.log(theText);
-  //split the text
+
   textSplit = theText.textContent.split("");
   console.log(textSplit);
 
-  //remove the original text
   theText.textContent = "";
 
-  //create a span element for each characers and put them inside the span
   textSplit.forEach((letter, index) => {
     const span = document.createElement("span");
     console.log(span);
@@ -92,6 +91,9 @@ function textAnime() {
 function toggleOption(event) {
   const target = event.currentTarget;
   const feature = target.dataset.feature;
+
+  const featureCarpetOne = document.querySelector(`[data-feature="carpetOne"`);
+  const featureCarpetTwo = document.querySelector(`[data-feature="carpetTwo"`);
 
   //Toggle feature in model
   features[feature] = !features[feature];
@@ -144,6 +146,14 @@ function toggleOption(event) {
       document.querySelector(`[data-feature=${feature}`).classList.add("hide");
       console.log(`Feature ${feature} is turned off!`);
     });
+  }
+
+  if (features[featureCarpetOne] == true) {
+    document.querySelector(`[data-feature="carpetTwo"`).classList.add("hide");
+    target.classList.remove("chosen");
+  } else if (features[featureCarpetTwo] == true) {
+    document.querySelector(`[data-feature="carpetOne"`).classList.add("hide");
+    target.classList.remove("chosen");
   }
 }
 
